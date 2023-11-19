@@ -54,7 +54,7 @@ Opciones:
   -z                    Usa 7zip en lugar de zip
 ```
 
-## installation
+## instalacion
 
 <details>
 <summary><b>Instrucciones de macOS</b></summary>
