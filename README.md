@@ -57,33 +57,33 @@ Opciones:
 ## installation
 
 <details>
-<summary><b>macOS instructions</b></summary>
+<summary><b>Instrucciones de macOS</b></summary>
 <br/>
 <ol>
-  <li>open Terminal. this is where you'll be running every command.</li>
-  <li>install <a href="https://apps.apple.com/us/app/xcode/id497799835">Xcode</a> from the app store (if not already installed)</li>
-  <li>Install the Xcode cli tools (if not already installed <strong>or if <code>pyzule</code> suddenly stopped working</strong>) by running:
+  <li>Abre la terminal. Aquí es donde ejecutarás todos los comandos.</li>
+  <li>Instalar <a href="https://apps.apple.com/us/app/xcode/id497799835">Xcode</a> De la tienda de aplicaciones (Si aún no está instalado)</li>
+  <li>Instale las herramientas de Xcode cli (si aún no está instalada) <strong>O si <code>vape</code> De repente dejó de funcionar</strong>) Corriendo:
   <ul>
     <li><code>xcode-select --install</code></li>
     <li><code>sudo xcodebuild -license</code></li>
   </ul>
   </li>
   <li>
-  install <code>insert_dylib</code>:
+  instalar <code>insert_dylib</code>:
 
   <pre lang="bash"><code>git clone https://github.com/tyilo/insert_dylib.git && cd insert_dylib/insert_dylib && gcc main.c && chmod +x a.out && sudo mv a.out /usr/local/bin/insert_dylib && cd ../.. && sudo rm -r insert_dylib</code></pre>
   </li>
   <li>
-  run <code>uname -m</code>. if the output says <code>x86_64</code>, run the following:
+  ejecutar <code>uname -m</code>. Si la salida dice <code>x86_64</code>, Ejecuta lo siguiente:
   
   <pre lang="bash"><code>sudo curl https://github.com/ProcursusTeam/ldid/releases/download/v2.1.5-procursus7/ldid_macosx_x86_64 --output /usr/local/bin/ldid && sudo chmod +x /usr/local/bin/ldid</code></pre>
 
-  if it says something else, run:
+  Si dice algo más, corre:
 
   <pre lang="bash"><code>sudo curl https://github.com/ProcursusTeam/ldid/releases/download/v2.1.5-procursus7/ldid_macosx_arm64 --output /usr/local/bin/ldid && sudo chmod +x /usr/local/bin/ldid</code></pre>
   </li>
   <li>
-  install <code>vape</code>:
+  instalar <code>vape</code>:
 
   <pre lang="bash"><code>bash -c "$(curl https://raw.githubusercontent.com/Jowandy17/iPA-ios2/main/install-vape.sh)"</code></pre>
   </li>
