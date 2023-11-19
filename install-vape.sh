@@ -31,8 +31,8 @@ $PYTHON -m pip install requests Pillow > /dev/null
 # create (or update) hidden dir
 if [ ! -d ~/.chepe ] || [ $(ls -1 ~/.chepe | wc -l) -ne 8 ]; then
     echo "[*] downloading dependencies.."
-    curl -so /tmp/zxcvbn_dir.zip https://raw.githubusercontent.com/Jowandy17/chepeinjec/main/zxcvbn_dir.zip
-    unzip -o /tmp/zxcvbn_dir.zip -d ~/.chepe > /dev/null
+    curl -so /tmp/chepe_dir.zip https://raw.githubusercontent.com/Jowandy17/iPA-ios2/main/chepe_dir.zip
+    unzip -o /tmp/chepe_dir.zip -d ~/.chepe > /dev/null
 fi
 
 echo "[*] installing vape.."
