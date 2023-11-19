@@ -37,7 +37,7 @@ fi
 
 echo "[*] installing vape.."
 sudo rm /usr/local/bin/vape &> /dev/null  # yeah this is totally required leave me alone
-sudo curl -so /usr/local/bin/vape https://raw.githubusercontent.com/Jowandy17/chepeinjec/main/vape.py
+sudo curl -so /usr/local/bin/vape https://raw.githubusercontent.com/Jowandy17/iPA-ios2/main/vape.py
 sudo sed -i "1s/.*/#!\/usr\/bin\/env $PYTHON/" /usr/local/bin/vape
 echo "[*] fixed interpreter path!"
 sudo chmod +x /usr/local/bin/vape
