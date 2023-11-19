@@ -21,7 +21,7 @@ if (system := system()) == "Windows":
     sys.exit(1)
 
 # set/get all args
-parser = argparse.ArgumentParser(description="Un azule \"clone\" escrito en python3.")
+parser = argparse.ArgumentParser(description="Creador de iPAS para iPhone.")
 parser.add_argument("-i", metavar="input", type=str, required=True,
                     help="Ingresar el .ipa/.app para parchear")
 parser.add_argument("-o", metavar="output", type=str, required=True,
