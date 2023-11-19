@@ -1,0 +1,5 @@
+# install-vape.sh
+experimental/
+testing.py
+.*.old
+vape
