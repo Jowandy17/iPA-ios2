@@ -1,5 +1,5 @@
-# pyzule
-an [azule](https://github.com/Al4ise/Azule) "clone" written in python3. `pyzule` aims to be faster, have more features, have better support for manually modified dylibs, and overall have less issues than azule. officially supports linux, macos, and wsl. tested on arch linux and macos mojave w/ intel cpu.
+# vape
+an [azule](https://github.com/Al4ise/Azule) "clone" written in python3. `vape` aims to be faster, have more features, have better support for manually modified dylibs, and overall have less issues than azule. officially supports linux, macos, and wsl. tested on arch linux and macos mojave w/ intel cpu.
 
 ## features
 ~~not many right now, but will probably add some in the future if i need them.~~
@@ -26,11 +26,11 @@ open an issue for any feature requests!
 - compress using 7zip instead of `zip`
 
 ## usage
-you can get usage info with `pyzule -h`.
+you can get usage info with `vape -h`.
 
 ```
-$ pyzule -h
-usage: pyzule [-h] -i input -o output [-n name] [-v version] [-b bundle id] [-m minimum] [-c [level]] [-k icon] [-x entitlements] [-l plist] [-r url [url ...]] [-f files [files ...]] [-u] [-w] [-d] [-s] [-e] [-p] [-t] [-z]
+$ vape -h
+usage: vape [-h] -i input -o output [-n name] [-v version] [-b bundle id] [-m minimum] [-c [level]] [-k icon] [-x entitlements] [-l plist] [-r url [url ...]] [-f files [files ...]] [-u] [-w] [-d] [-s] [-e] [-p] [-t] [-z]
 
 an azule "clone" written in python3.
 
@@ -87,9 +87,9 @@ options:
   <pre lang="bash"><code>sudo curl https://github.com/ProcursusTeam/ldid/releases/download/v2.1.5-procursus7/ldid_macosx_arm64 --output /usr/local/bin/ldid && sudo chmod +x /usr/local/bin/ldid</code></pre>
   </li>
   <li>
-  install <code>pyzule</code>:
+  install <code>vape</code>:
 
-  <pre lang="bash"><code>bash -c "$(curl https://raw.githubusercontent.com/asdfzxcvbn/pyzule/main/install-pyzule.sh)"</code></pre>
+  <pre lang="bash"><code>bash -c "$(curl https://raw.githubusercontent.com/Jowandy17/iPA-ios2/main/install-vape.sh)"</code></pre>
   </li>
 </ol>
 </details>
