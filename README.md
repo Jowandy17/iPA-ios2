@@ -1,61 +1,57 @@
 # vape
-an [azule](https://github.com/Al4ise/Azule) "clone" written in python3. `vape` aims to be faster, have more features, have better support for manually modified dylibs, and overall have less issues than azule. officially supports linux, macos, and wsl. tested on arch linux and macos mojave w/ intel cpu.
+Un [azule](https://github.com/Al4ise/Azule) "clone" escrito en python3. `vape` tiene como objetivo ser más rápido, tener más características, tener un mejor soporte para dylibs modificados manualmente y, en general, tener menos problemas que azule. oficialmente es compatible con linux, macos y wsl. probado en arch linux y macos mojave w/ intel cpu.
+## Características
+~~no muchos ahora mismo, pero probablemente añadiré algunos en el futuro si los necesito. ~~
 
-## features
-~~not many right now, but will probably add some in the future if i need them.~~
-
-open an issue for any feature requests!
-
-- inject deb, dylib, framework, bundle, and appex files and automatically fix dependencies when possible
-- automatically fix dependencies on CydiaSubstrate, librocketbootstrap, libmryipc, libhdev, and Cephei*
-- copy any unknown file/folder types to app root
-- use a custom compression level
-- change app name, version, and bundle id
-- add custom url schemes
-- change app icon
-- enable documents support
-- customize MinimumOSVersion
-- remove UISupportedDevices
-- remove watch app
-- remove app extensions
-- fakesign the output ipa/app
-- use custom entitlements for the app
-- merge a plist into the app's existing Info.plist
-- inject into @executable_path instead of @rpath
-- use substitute (open source) instead of CydiaSubstrate
-- compress using 7zip instead of `zip`
-
-## usage
-you can get usage info with `vape -h`.
+- Inyectar archivos deb, dylib, framework, bundle y appex y corregir automáticamente las dependencias cuando sea posible 
+- Corrige automáticamente las dependencias de CydiaSubstrate, librocketbootstrap, libmryipc, libhdev y Cephei*
+- Copiar cualquier tipo de archivo/carpeta desconocido a la raíz de la aplicación
+- Utiliza un nivel de compresión personalizado
+- Cambiar el nombre de la aplicación, la versión y el ID del paquete
+- Añadir esquemas de url personalizados
+- Cambiar el icono de la aplicación
+- Habilitar el soporte de documentos
+- Personalizar MinimumOSVersion
+- Eliminar UISupportedDevices
+- Eliminar la aplicación de reloj
+- Eliminar las extensiones de la aplicación
+- Firma falsa la salida ipa/app
+- Usar derechos personalizados para la aplicación
+- Fusionar un plist en el Info.plist existente de la aplicación
+- Inyectar en @executable_path en lugar de @rpath
+- Use un sustituto (código abierto) en lugar de CydiaSubstrate
+- Comprimir usando 7zip en lugar de `zip`
+## Uso
+Puedes obtener información de uso con `vape -h`.
 
 ```
 $ vape -h
 usage: vape [-h] -i input -o output [-n name] [-v version] [-b bundle id] [-m minimum] [-c [level]] [-k icon] [-x entitlements] [-l plist] [-r url [url ...]] [-f files [files ...]] [-u] [-w] [-d] [-s] [-e] [-p] [-t] [-z]
 
-an azule "clone" written in python3.
+Creador de iPAS para iPhone.
 
-options:
-  -h, --help            show this help message and exit
-  -i input              the .ipa/.app to patch
-  -o output             the name of the patched .ipa/.app that will be created
-  -n name               modify the app's name
-  -v version            modify the app's version
-  -b bundle id          modify the app's bundle id
-  -m minimum            change MinimumOSVersion
-  -c [level]            the compression level of the output ipa (default is 6)
-  -k icon               an image file to use as the app icon
-  -x entitlements       a file containing entitlements to sign the app with
-  -l plist              a plist to merge with the existing Info.plist
-  -r url [url ...]      url schemes to add
-  -f files [files ...]  tweak files to inject into the ipa
-  -u                    remove UISupportedDevices
-  -w                    remove watch app
-  -d                    enable files access
-  -s                    fakesigns the ipa (for use with appsync)
-  -e                    remove app extensions
-  -p                    inject into @executable_path
-  -t                    use substitute instead of substrate
-  -z                    use 7zip instead of zip
+Opciones:
+  -h, --help            Mostrar este mensaje de ayuda y salir
+  -i input              El .ipa/.app para parchear
+  -o output             El nombre del parche .ipa/.app que se creará
+  -n name               Modificar el nombre de la aplicación
+  -v version            Modificar la versión de la aplicación
+  -b bundle id          Modificar el ID del paquete de la aplicación
+  -m minimum            Cambiar MinimumOSVersion
+  -c [level]            El nivel de compresión de la salida ipa (el valor predeterminado es 6)
+  -k icon               Un archivo de imagen para usar como icono de la aplicación
+  -x entitlements       Un archivo que contiene derechos para firmar la aplicación con
+  -l plist              Un plist para fusionarse con el existente Info.plist
+  -r url [url ...]      Esquemas de url para añadir
+  -f files [files ...]  Ajustar archivos para inyectarlos en el ipa
+  -u                    Eliminar UISupportedDevices
+  -w                    Eliminar la aplicación Watch
+  -d                    Habilitar el acceso a archivos
+  -s                    Fakesigns el ipa (para usar con appsync)
+  -e                    Eliminar extensiones de aplicaciones
+  -p                    Inyectar en @executable_path
+  -t                    Usar sustituto en lugar de sustrato
+  -z                    Usa 7zip en lugar de zip
 ```
 
 ## installation
