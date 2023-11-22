@@ -46,7 +46,7 @@ parser.add_argument("-l", metavar="Plist", type=str, required=False,
                     help="Un plist para fusionarse con el existente Info.plist")
 parser.add_argument("-r", metavar="Url", type=str, required=False,
                     help="Esquemas de url para añadir", nargs="+")
-parser.add_argument("-f", metavar="Archivos", nargs="+", type=str,
+parser.add_argument("-f", metavar="Files", nargs="+", type=str,
                     help="Ingresar tweak para inyectar en el ipa")
 parser.add_argument("-u", action="store_true",
                     help="Eliminar UISupportedDevices")
