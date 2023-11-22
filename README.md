@@ -1,7 +1,7 @@
 # vape
 Un [azule](https://github.com/Al4ise/Azule) "clone" escrito en python3. `vape` tiene como objetivo ser más rápido, tener más características, tener un mejor soporte para dylibs modificados manualmente y, en general, tener menos problemas que azule. oficialmente es compatible con linux, macos y wsl. probado en arch linux y macos mojave w/ intel cpu.
 ## Características
-~~no muchos ahora mismo, pero probablemente añadiré algunos en el futuro si los necesito. ~~
+~~no muchos ahora mismo, pero probablemente añadiré algunos en el futuro si los necesito.~~
 
 - Inyectar archivos deb, dylib, framework, bundle y appex y corregir automáticamente las dependencias cuando sea posible 
 - Corrige automáticamente las dependencias de CydiaSubstrate, librocketbootstrap, libmryipc, libhdev y Cephei*
