@@ -22,31 +22,31 @@ if (system := system()) == "Windows":
 
 # set/get all args
 parser = argparse.ArgumentParser(description="Creador de iPAS para iPhone.")
-parser.add_argument("-i", metavar="input", type=str, required=True,
+parser.add_argument("-i", metavar="Entrada", type=str, required=True,
                     help="Ingresar el .ipa/.app para parchear")
-parser.add_argument("-o", metavar="output", type=str, required=True,
+parser.add_argument("-o", metavar="Salida", type=str, required=True,
                     help="Ingresar el nombre del parche .ipa/.app que se creará")
-parser.add_argument("-n", metavar="name", type=str, required=False,
+parser.add_argument("-n", metavar="Nombre", type=str, required=False,
                     help="Modificar el nombre de la aplicación")
-parser.add_argument("-v", metavar="version", type=str, required=False,
+parser.add_argument("-v", metavar="Version", type=str, required=False,
                     help="Modificar la versión de la aplicación")
-parser.add_argument("-b", metavar="bundle id", type=str, required=False,
+parser.add_argument("-b", metavar="Bundle id", type=str, required=False,
                     help="Modificar el ID del paquete de la aplicación")
-parser.add_argument("-m", metavar="minimum", type=str, required=False,
+parser.add_argument("-m", metavar="Minimum", type=str, required=False,
                     help="Cambiar MinimumOSVersion")
-parser.add_argument("-c", metavar="level", type=int, default=6,
+parser.add_argument("-c", metavar="Nivel", type=int, default=6,
                     help="Cambiar El nivel de compresión de la salida ipa (el es 6)",
                     action="store", choices=range(1, 10),
                     nargs="?", const=1)
-parser.add_argument("-k", metavar="icon", type=str, required=False,
+parser.add_argument("-k", metavar="Icono", type=str, required=False,
                     help="Un archivo de imagen para usar como icono de la aplicación")
-parser.add_argument("-x", metavar="entitlements", type=str, required=False,
+parser.add_argument("-x", metavar="Derechos", type=str, required=False,
                     help="Un archivo que contiene derechos para firmar la aplicación con")
-parser.add_argument("-l", metavar="plist", type=str, required=False,
+parser.add_argument("-l", metavar="Plist", type=str, required=False,
                     help="Un plist para fusionarse con el existente Info.plist")
-parser.add_argument("-r", metavar="url", type=str, required=False,
+parser.add_argument("-r", metavar="Url", type=str, required=False,
                     help="Esquemas de url para añadir", nargs="+")
-parser.add_argument("-f", metavar="files", nargs="+", type=str,
+parser.add_argument("-f", metavar="Archivos", nargs="+", type=str,
                     help="Ingresar tweak para inyectar en el ipa")
 parser.add_argument("-u", action="store_true",
                     help="Eliminar UISupportedDevices")
