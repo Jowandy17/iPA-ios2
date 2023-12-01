@@ -35,8 +35,8 @@ parser.add_argument("-b", metavar="Bundle id", type=str, required=False,
 parser.add_argument("-m", metavar="Minimum", type=str, required=False,
                     help="Cambiar MinimumOSVersion")
 parser.add_argument("-c", metavar="Nivel", type=int, default=6,
-                    help="Cambiar El nivel de compresión de la salida ipa (el es 6)",
-                    action="store", choices=range(1, 10),
+                    help="Cambiar El nivel de compresión de la salida ipa (el es 6, 0-9)",
+                    action="store", choices=range(0, 10),
                     nargs="?", const=1)
 parser.add_argument("-k", metavar="Icono", type=str, required=False,
                     help="Un archivo de imagen para usar como icono de la aplicación")
@@ -127,8 +127,8 @@ if args.f:
         print("[*] will use substitute instead of substrate")
 
 if not args.o.endswith(".app") and args.z:
-    if args.c != 6:
-        print("[!] compression level will be ignored when using 7z")
+   #if args.c != 6:
+   #     print("[!] compression level will be ignored when using 7z")
     try:
         run(["7z"], check=True, stdout=DEVNULL, stderr=DEVNULL)
     except (CalledProcessError, FileNotFoundError):
@@ -618,14 +618,14 @@ if not changed:
 os.chdir(EXTRACT_DIR)
 if OUTPUT_IS_IPA:
     if args.z:
-        print("[*] generating ipa using 7z..")
+       print(f"[*] generating ipa with 7z using compression level {args.c}..")
     else:
         print(f"[*] generating ipa using compression level {args.c}..")
     if not INPUT_IS_IPA:
         os.makedirs("Payload")
         run(f"mv '{INPUT_BASENAME}' 'Payload/{INPUT_BASENAME}'", shell=True, check=True)
     if args.z:
-        run(f"7z a '{os.path.basename(args.o)}' Payload", shell=True, check=True)
+        run(f"7z a -tzip -mx={args.c} '{os.path.basename(args.o)}' Payload", shell=True, check=True)
         print()  # just need a new line!
     else:
         run(f"zip -{args.c} -r '{os.path.basename(args.o)}' Payload", shell=True, stdout=DEVNULL, check=True)
